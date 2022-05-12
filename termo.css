@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
+*{
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+/* Variaveis */
+:root{
+  --transition-time: 0s;
+}
+
+.mode{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  opacity: 70%;
+}
+.mode button{
+  display: flex;
+  width: 130px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 2px 0px #ffffff;
+}
+.mode svg{
+  margin-right: auto;
+}
+.mode a{
+  margin-right: 5px;
+}
+#mode2{
+  fill: #fff;
+  background: black;
+  color: #fff;
+}
+#mode1{
+  fill: black;
+  background: #fff;
+  color: black;
+}
+
+
+/* Configurações Gerais */
+body{
+  background-color: var(--background-color);
+  transition: background-color var(--transition-time);
+}
+
+.title{
+  color: var(--button-txt);
+  text-align: center;
+  text-transform: uppercase;
+  background: var(--button-color);
+  border-radius: 15px 15px 0 0;
+  margin: 15px 10px;
+  padding: 5px 0;
+  transition: background var(--transition-time);
+}
+
+/* Configurações Table */
+.container{
+  max-width: 500px;
+  margin: 10px auto;
+}
+.temperature{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+
+.igual{
+  margin-top: 4px;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.section input{
+  text-align: center;
+  background: var(--input-color);
+  color: var(--table-txt-color);
+  border: none;
+  
+  transition: background var(--transition-time), color var(--transition-time);
+
+  font-size: 20px;
+  height: 50px;
+  outline: none;
+}
+
+/* Selecionadores Termo */
+select{
+  font-size: 17px;
+  cursor: pointer;
+  top: 0px;
+  left: 0px;
+  border: none;
+  margin-bottom: 5px;
+  color: var(--table-txt-color);
+  height: 25px;
+  
+  background: var(--select-color);
+  width: 100%;
+  transition: background var(--transition-time), color var(--transition-time);
+}
+select:focus{
+  outline: none;
+  background: var(--select-color);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+  width: 100%;
+}
+
+/* Botões */
+.buttons{
+  width: fit-content;
+  margin: 10px auto;
+  display: flex;
+  gap: 5px 15px;
+}
+
+.button{
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px;
+  transition: filter .3s;
+}
+#button-swap{
+  background-color: var(--button-color);
+  transition: filter 2s, background var(--transition-time);
+}
+#button-swap:hover{
+  filter: brightness(1.15);
+  transition: filter .3s;
+}
+#button-swap svg{
+  fill: var(--button-txt);
+}
+
+summary{
+  font-size: 15px;
+  background-color: var(--button-color);
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media(max-width: 650px){
+  .mode button{
+    width: fit-content;
+  }
+  .mode a{
+    display: none;
+  }
+  
+  .title{
+    font-size: 18px;
+    padding: 15px 0;
+  }
+  
+  .container{
+    max-width: 400px;
+  }
+  .temperature{
+    flex-direction: column;
+  }
+
+  select{
+    font-size: 20px;
+    padding: 5px;
+    height: 50px;
+  }
+  input[type=number] {
+    height: 70px;
+  }
+  
+
+  .igual{
+    margin: 10px 0;
+    align-self: center;
+
+    flex-direction: row;
+    gap: 5px;
+    
+    width: 100%;
+  }
+  #button-swap{
+    padding: 10px;
+    width: 100%;
+  }
+
+  summary{
+    font-size: 18px;
+  }
+  
+}
+
+  
+.inputs{
+  border-radius: 10px;
+  overflow: hidden;
+}
+#Ponto1, #Ponto2{
+  margin-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: none;
+}
+#Ponto1 input:first-of-type, #Ponto2 input:first-of-type{
+  margin-bottom: 5px;
+}
+
+
+
+
+.calculo-bom{
+  background: var(--input-color);
+  width: 100%;
+  overflow: hidden;
+  padding: 5px 0;
+  border-radius: 0 0px 10px 10px;
+  transition: background var(--transition-time);
+}
+
+.resposta{
+  padding: 10px;
+  width: fit-content;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+
+  transition: color var(--transition-time);
+}
+
+.calculotop hr{
+  margin: 20px 0;
+}
+.calculotop .resposta{
+  margin: 0 auto;
+  padding: 0;
+}
+.calculotop .resposta p{
+  margin: 5px auto;
+  padding: 0;
+}
+
+.resposta input{
+  width: 20px;
+  background: transparent;
+  border: none;
+
+  color: var(--text);
+  transition: color var(--transition-time);
+}
+.demo{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.division{
+  min-width: 50px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.division input{
+  width: 100%;
+  text-align: center;
+}
+.division input:focus{
+  outline: none;
+}
+  
+hr{
+  width: 100%;
+  border: none;
+  border: 1px solid;
+}
+
+.division hr{
+  margin: 5px 0;
+}
+hr:not(.resposta hr){
+  opacity: 20%;
+}
+
+#igual{
+  margin: 0 10px;
+}
+
+.test1{
+  margin: 10px;
+}
+
+.ultimo{
+  margin: 15px 0
+}
